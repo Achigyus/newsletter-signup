@@ -18,7 +18,7 @@
     }
 
     .attribution a {
-      color: hsl(228, 45%, 44%);
+      color: #F5634F;
     }
   </style>
   <link rel="stylesheet" href="style.css">
@@ -35,27 +35,33 @@
         
         <div class="cont_top">
           <div class="cont_top_img_cont">
-            <img src="/assets/images/illustration-sign-up-mobile.svg" alt="sign up illustration" class="cont_top_img"/>
+            <img src="/assets/images/illustration-sign-up-mobile.svg" alt="sign up illustration" class="cont_top_img mobile"/>
+            <img src="/assets/images/illustration-sign-up-desktop.svg" alt="sign up illustration" class="cont_top_img desktop"/>
           </div>
         </div>
         
         
         <div class="cont_bottom">
-          <h1 class="cont_bottom_h1 fw700">Stay updated!</h1>
-          
-          <p class="cont_bottom_p fw400">Join 60,000+ product managers receiving monthly updates on:</p>
-          
-          <ul class="cont_bottom_ul">
-            <li class="cont_bottom_li fw400">Product discovery and building what matters</li>
-            <li class="cont_bottom_li fw400">Measuring to ensure updates are a success</li>
-            <li class="cont_bottom_li fw400">And much more!</li>
-          </ul>
+          <div class="cont_bottom_top">
+            <h1 class="cont_bottom_h1 fw700">Stay updated!</h1>
+            
+            <p class="cont_bottom_p fw400">Join 60,000+ product managers receiving monthly updates on:</p>
+            
+            <ul class="cont_bottom_ul">
+              <li class="cont_bottom_li fw400">Product discovery and building what matters</li>
+              <li class="cont_bottom_li fw400">Measuring to ensure updates are a success</li>
+              <li class="cont_bottom_li fw400">And much more!</li>
+            </ul>
+          </div>
           
           <!-- Form Starts -->
           <form action="" class="form" id="form" novalidate>
-            <label for="email_address" class="label_email_address fw700">Email address</label>
+            <div class="label_error">
+              <label for="email_address" class="label_email_address fw700">Email address</label>
+              <p class="error_display fw700" id="error_display"></p>
+            </div>
             <input type="email" id="email_address" class="input_email_address" placeholder="email@company.com">
-            <p class="error_display fw700" id="error_display"></p>
+            
             <button type="submit" class="form_submit_btn fw700">Subscribe to monthly newsletter</button>
           </form>
           <!-- Form Ends -->

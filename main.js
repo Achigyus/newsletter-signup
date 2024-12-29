@@ -10,20 +10,20 @@ function submitForm(e) {
   
   let emailValue = email.value
   if (emailValue !== '') {
-    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let validRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (validRegex.test(emailValue)) {
       emailSpan.textContent = emailValue
+      form.classList.remove('error')
       contWrap.classList.add('active')
-      errorDisplay.classList.remove('active')
     } else {
-      errorDisplay.textContent = "Invalid Email Format!"
-      errorDisplay.classList.add('active')
+      errorDisplay.textContent = "Valid email required"
+      form.classList.add('error')
       // alert('Invalid Email Format!') 
     }
     
   } else {
     errorDisplay.textContent = "You need to fill in your email address!"
-    errorDisplay.classList.add('active')
+    form.classList.add('error')
     // alert('You need to fill in your email address')
   }
   
