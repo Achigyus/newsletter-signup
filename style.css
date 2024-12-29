@@ -8,6 +8,8 @@
 html, body {
     height: 100%;
     font-family: Arial, sans-serif;
+    color: #242742;
+    background: #36384D;
 }
 
 img {
@@ -32,4 +34,189 @@ button {
 
 input, button, textarea, select {
     font: inherit;
+}
+
+@font-face {
+  font-family: Roberto-Bold;
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+
+.fw400{
+  font-family: Roboto-Regular;
+}
+
+.fw700{
+  font-family: Roberto-Bold;
+}
+
+.success_message{
+  display: none;
+  /* display: block; */
+  padding: 0 24px;
+}
+
+.container{
+  inline-size: 100%;
+}
+
+.cont_wrap{
+  display: flex;
+  flex-direction: column;
+  max-inline-size: 400px;
+  margin: auto;
+  background: #fff;
+  min-block-size: 100vh;
+  /* align-items: start;
+  justify-content: center */
+}
+
+.cont_wrap.active{
+  align-items: start;
+  justify-content: center;
+}
+
+.cont_wrap.active .cont_top, .cont_wrap.active .cont_bottom{
+  display: none;
+}
+
+.cont_wrap.active .success_message{
+  display: block;
+}
+
+.cont_top, .cont_bottom{
+  inline-size: 100%;
+  /* display: none; */
+}
+
+.cont_top_img_cont{
+    inline-size: 100%;
+}
+
+.cont_top_img{
+  inline-size: 100%;
+  display: inline-block;
+}
+
+.cont_bottom{
+  padding: 24px 12px;
+}
+
+.cont_bottom_h1{
+  font-size: 40px;
+  line-height: 1.0;
+  margin-block-end: 12px;
+}
+
+.cont_bottom_p{
+  font-size: 16px;
+  line-height: 1.5;
+  color: #242742;
+  margin-block-end: 12px;
+}
+
+.cont_bottom_li{
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cont_bottom_ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin-block-end: 24px;
+}
+
+.cont_bottom_li {
+  position: relative;
+  padding-left: 40px; /* Space for the image */
+}
+
+.cont_bottom_li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 21px; /* Desired width */
+  height: 21px; /* Desired height */
+  background-image: url(/assets/images/icon-success.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.label_email_address{
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.input_email_address{
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Roboto-Regular;
+  padding: 12px 24px;
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  border-radius: 8px;
+  margin-block-end: 5px;
+}
+
+.form_submit_btn{
+  margin-block-start: 24px;
+  background: #242742;
+  border-radius: 8px;
+  color: #fff;
+  padding: 16px;
+}
+
+.success_msg_img_cont{
+  margin-block-end: 40px;
+}
+
+.success_msg_h1{
+  font-size: 40px;
+  line-height: 1.0;
+  margin-block-end: 24px;
+}
+
+.success_msg_p{
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.success_msg_dismiss_btn{
+  margin-block-start: 150px;
+  background: #242742;
+  border-radius: 8px;
+  color: #fff;
+  padding: 16px;
+  inline-size: 100%;
+}
+
+.error_display{
+  color: red;
+  font-size: 14px;
+  line-height: 1.0;
+  display: none;
+}
+
+.error_display.active{
+  display: block;
+}
+
+.attribution {
+  margin: 10px auto;
+  text-align: center;
+  color: #fff;
 }
